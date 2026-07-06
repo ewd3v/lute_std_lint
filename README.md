@@ -1,9 +1,9 @@
 # lute_std_lint
-A [Lute lint](https://lute.luau.org/cli/lint/) to check for allowed std references
+A [Lute lint](https://lute.luau.org/cli/lint/) rule to check for disallowed [standard library](https://lute.luau.org/std/) references
 
 ## Why?
 
-When using [Luau](https://luau.org/) packages it's nice to know what [std libraries](https://lute.luau.org/std/) the package depends on to tell if it will run under a specific Luau runtime without testing first. While package maintainers can [document this](#required-libraries), they might also want to enforce this list so they can guarantee it's accurate. This lint helps you achieve that.
+When using [Luau](https://luau.org/) packages it's nice to know what standard libraries the package depends on to tell if it will run under a specific Luau runtime without testing first. While package maintainers can [document this](#required-libraries), they might also want to enforce this list so they can guarantee it's accurate. This lint helps you achieve that.
 
 ## Installation
 

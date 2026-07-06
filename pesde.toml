@@ -1,6 +1,6 @@
 name = "ewdev/lute_std_lint"
 version = "0.0.0"
-description = "A Lute lint to check for allowed std references"
+description = "A Lute lint rule to check for disallowed standard library references"
 authors = ["EwDev (https://ewdev.net/)"]
 repository = "https://github.com/ewd3v/lute_std_lint"
 license = "MIT"
