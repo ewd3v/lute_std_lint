@@ -54,7 +54,10 @@ run = "luau-lsp analyze --settings=.vscode/settings.json --ignore **/.lute/typed
 hide = true
 depends = ["lint:setup"]
 raw_args = true
-run = "lute lint {{vars.lint_paths}}"
+run = [
+    "lute lint {{vars.lint_paths}}",
+    "lute lint --no-default-lints -c src/.config.luau src",
+]
 
 [tasks."lint:selene"]
 hide = true
