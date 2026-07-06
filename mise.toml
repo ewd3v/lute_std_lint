@@ -72,6 +72,7 @@ depends = ["lint:luau-lsp", "lint:lute", "lint:selene", "lint:stylua"]
 
 [tasks."test"]
 description = "Runs tests with Lute"
+depends = ["lute:setup"]
 raw_args = true
 run = "lute test"
 
