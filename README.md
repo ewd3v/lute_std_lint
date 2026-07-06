@@ -10,7 +10,7 @@ When using [Luau](https://luau.org/) packages it's nice to know what [std librar
 ### [pesde](https://pesde.dev/) (recommended)
 
 ```bash
-pesde add ewdev/lute_std_lint -t luau
+pesde add ewdev/lute_std_lint --dev --target luau
 ```
 
 ### Manual
