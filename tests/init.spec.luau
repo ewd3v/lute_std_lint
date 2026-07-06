@@ -33,7 +33,7 @@ local function assertLint(folderName: string, expectedResult: boolean)
 		then `Expected test {folderName} to succeed, but it failed`
 		else `Expected test {folderName} to fail, but it succeeded`
 
-	error(failure.assertion(`{msg}:\n{result.stdout}`, 3))
+	error(failure.assertion(`{msg}:\n{result.stdout}\n{result.stderr}`, 3))
 end
 
 local function wrapLint(folderName: string, expectedResult: boolean)
