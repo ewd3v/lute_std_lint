@@ -2,7 +2,7 @@ return {
 	lute = {
 		lint = {
 			ruleconfigs = {
-				std = {
+				["std"] = {
 					options = {
 						allow = { "fs" },
 					},
