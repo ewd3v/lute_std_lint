@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "editorconfig.editorconfig",
+        "johnnymorganz.luau-lsp",
+        "hverlin.mise-vscode",
+        "kampfkarren.selene-vscode",
+        "johnnymorganz.stylua"
+    ]
+}

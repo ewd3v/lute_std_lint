@@ -1,0 +1,2 @@
+[tasks."pesde:install"]
+run = "pesde install --locked"

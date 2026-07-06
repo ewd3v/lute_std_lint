@@ -1,0 +1,26 @@
+{
+    "[lua][luau]": {
+        "editor.defaultFormatter": "JohnnyMorganz.stylua",
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": false
+    },
+    "files.eol": "\n",
+    "search.exclude": {
+        "**/.pesde": true
+    },
+    "files.readonlyInclude": {
+        "**/*_packages/**": true,
+        "**/.pesde/**": true,
+        "*.lock": true
+    },
+    "luau-lsp.completion.imports.ignoreGlobs": [
+        "**/.pesde/**"
+    ],
+    "luau-lsp.ignoreGlobs": [
+        "**/.pesde/**",
+        "**/*_packages/**"
+    ],
+    "luau-lsp.platform.type": "standard",
+    "luau-lsp.fflags.enableNewSolver": true,
+    "stylua.configPath": ".stylua.toml"
+}

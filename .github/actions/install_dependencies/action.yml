@@ -1,0 +1,16 @@
+name: Install dependencies
+
+runs:
+  using: composite
+  steps:
+    - name: Cache dependencies
+      uses: actions/cache@v6
+      with:
+        path: |
+          ~/.pesde
+        key: ${{ runner.os }}-pesde-${{ hashFiles('**/pesde.lock') }}
+        restore-keys: ${{ runner.os }}-pesde-
+
+    - name: Install dependencies
+      shell: sh
+      run: mise --env ci run --force install_dependencies

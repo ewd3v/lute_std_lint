@@ -1,0 +1,6 @@
+# local files
+mise.local.toml
+
+# generated
+*_packages
+.pesde

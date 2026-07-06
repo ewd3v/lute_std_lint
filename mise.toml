@@ -1,0 +1,87 @@
+[tools]
+cargo-binstall = "latest"
+"github:pesde-pkg/pesde" = "latest"
+"github:luau-lang/lute" = "1.0.0"
+"github:JohnnyMorganz/StyLua" = "2.5.2"
+"github:JohnnyMorganz/luau-lsp" = "1.68.0"
+"cargo:selene" = "0.31.0"                  # Github linux build is missing +x permission
+"npm:@changesets/cli" = "2.31.0"
+
+[vars]
+lint_paths = "src tests scripts"
+
+[tasks."scaffold"]
+description = "Scaffolds a new project"
+interactive = true
+run = "lute run scripts/scaffold.luau"
+depends_post = ["sync_package_version"]
+
+[tasks."sync_package_version"]
+hide = true
+run = "lute run scripts/sync_package_version"
+
+[tasks."changesets:publish"]
+description = "Runs changesets publish workflow"
+raw_args = true
+run = "changeset tag"
+
+[tasks."changesets:version"]
+description = "Runs changesets version and syncs package versions"
+raw_args = true
+run = "changeset version"
+depends_post = ["sync_package_version"]
+
+[tasks."setup"]
+description = "Runs initial setup, recommended to run after cloning"
+depends = ["lint:setup"]
+
+[tasks."lute:setup"]
+hide = true
+raw_args = true
+run = "lute setup"
+
+[tasks."lint:setup"]
+description = "Runs required setup for proper linting to work"
+depends = ["lute:setup", "install_dependencies"]
+
+[tasks."lint:luau-lsp"]
+hide = true
+depends = ["lint:setup"]
+raw_args = true
+run = "luau-lsp analyze --settings=.vscode/settings.json --ignore **/.lute/typedefs** {{vars.lint_paths}}"
+
+[tasks."lint:lute"]
+hide = true
+depends = ["lint:setup"]
+raw_args = true
+run = "lute lint {{vars.lint_paths}}"
+
+[tasks."lint:selene"]
+hide = true
+raw_args = true
+run = "selene --no-summary {{vars.lint_paths}}"
+
+[tasks."lint:stylua"]
+hide = true
+raw_args = true
+run = "stylua --check --respect-ignores {{vars.lint_paths}}"
+
+[tasks."lint"]
+description = "Lints the codebase with different linters"
+depends = ["lint:luau-lsp", "lint:lute", "lint:selene", "lint:stylua"]
+
+[tasks."test"]
+description = "Runs tests with Lute"
+raw_args = true
+run = "lute test"
+
+[tasks."pesde:install"]
+description = "Installs pesde defined packages"
+raw_args = true
+run = "pesde install"
+sources = ["pesde.toml"]
+outputs = ["**/pesde.lock", "**/*_packages", "**/.pesde"]
+
+[tasks."install_dependencies"]
+description = "Installs dependencies"
+depends = ["pesde:install"]
