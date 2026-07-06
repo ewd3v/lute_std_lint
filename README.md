@@ -1,2 +1,2 @@
-# luau_package_template
-A project template for Luau packages
+# lute_std_lint
+A Lute lint to check for allowed std references

@@ -1,8 +1,8 @@
-name = "ewdev/luau_package_template"
+name = "ewdev/lute_std_lint"
 version = "0.0.0"
-description = "A project template for Luau packages"
+description = "A Lute lint to check for allowed std references"
 authors = ["EwDev (https://ewdev.net/)"]
-repository = "https://github.com/ewd3v/luau_package_template"
+repository = "https://github.com/ewd3v/lute_std_lint"
 license = "MIT"
 
 [target]
