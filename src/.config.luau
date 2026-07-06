@@ -5,7 +5,7 @@ return {
 			ruleconfigs = {
 				["std"] = {
 					options = {
-						allow = { "path", "syntax", "syntax/utils", "syntax/query", "stringext" },
+						allow = { "path", "stringext", "syntax", "syntax/query", "syntax/utils" },
 					},
 				},
 			},

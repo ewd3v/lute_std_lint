@@ -3,7 +3,7 @@ A [Lute lint](https://lute.luau.org/cli/lint/) to check for allowed std referenc
 
 ## Why?
 
-When using [Luau](https://luau.org/) packages it's nice to know what [std libraries](https://lute.luau.org/std/) the package depends on to tell if it will run under a specific Luau runtime without testing first. While package maintainers can document this, they might also want to enforce this list so they can guarantee it's accurate. This lint helps you achieve that.
+When using [Luau](https://luau.org/) packages it's nice to know what [std libraries](https://lute.luau.org/std/) the package depends on to tell if it will run under a specific Luau runtime without testing first. While package maintainers can [document this](#required-libraries), they might also want to enforce this list so they can guarantee it's accurate. This lint helps you achieve that.
 
 ## Installation
 
@@ -68,3 +68,12 @@ More examples on how to configure Lute lints: https://lute.luau.org/cli/lint/#c-
 
 - **allow**: A list of [Lua patterns](https://www.lua.org/manual/5.3/manual.html#6.4.1) for allowed std libraries. If any match fully the std library is considered allowed. These patterns do not need to match the std alias (i.e `@std`), and is instead configured with the option below. (default: `{}`)
 - **std_prefix**: The alias the std libraries are required under. (default: `"@std"`)
+
+## Required libraries
+
+- [@std](https://lute.luau.org/std/)
+    - [path](https://lute.luau.org/std/path/)
+    - [stringext](https://lute.luau.org/std/stringext.html)
+    - [syntax](https://lute.luau.org/std/syntax/)
+        - [query](https://lute.luau.org/std/syntax/query.html)
+        - [utils](https://lute.luau.org/std/syntax/utils/)
