@@ -19,6 +19,7 @@ depends_post = ["sync_package_version"]
 [tasks."sync_package_version"]
 hide = true
 run = "lute run scripts/sync_package_version"
+depends_post = ["pesde:update"]
 
 [tasks."changesets:publish"]
 description = "Runs changesets publish workflow"
@@ -85,6 +86,13 @@ raw_args = true
 run = "pesde install"
 sources = ["pesde.toml"]
 outputs = ["**/pesde.lock", "**/*_packages", "**/.pesde"]
+
+[tasks."pesde:update"]
+description = "Updates the pesde lockfile"
+raw_args = true
+run = "pesde update"
+sources = ["pesde.toml"]
+outputs = ["**/pesde.lock"]
 
 [tasks."install_dependencies"]
 description = "Installs dependencies"
