@@ -24,7 +24,7 @@ depends_post = ["pesde:update"]
 [tasks."changesets:publish"]
 description = "Runs changesets publish workflow"
 raw_args = true
-run = "changeset tag"
+run = "changeset publish"
 
 [tasks."changesets:version"]
 description = "Runs changesets version and syncs package versions"
