@@ -4,6 +4,7 @@ description = "A Lute lint rule to check for disallowed standard library referen
 authors = ["EwDev (https://ewdev.net/)"]
 repository = "https://github.com/ewd3v/lute_std_lint"
 license = "MIT"
+includes = ["pesde.toml", "README.md", "LICENSE", "src/**/*.luau"]
 
 [target]
 environment = "luau"
