@@ -71,9 +71,9 @@ More examples on how to configure Lute lints: https://lute.luau.org/cli/lint/#c-
 
 ## Required libraries
 
-- [@std](https://lute.luau.org/std/)
-    - [path](https://lute.luau.org/std/path/)
-    - [stringext](https://lute.luau.org/std/stringext.html)
-    - [syntax](https://lute.luau.org/std/syntax/)
-        - [query](https://lute.luau.org/std/syntax/query.html)
-        - [utils](https://lute.luau.org/std/syntax/utils/)
+- [@lint/types](https://lute.luau.org/std/commands/lint/types.html)
+- [@std/path](https://lute.luau.org/std/path/)
+- [@std/stringext](https://lute.luau.org/std/stringext.html)
+- [@std/syntax](https://lute.luau.org/std/syntax/)
+- [@std/syntax/query](https://lute.luau.org/std/syntax/query.html)
+- [@std/syntax/utils](https://lute.luau.org/std/syntax/utils/)
