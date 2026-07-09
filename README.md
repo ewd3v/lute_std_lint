@@ -50,9 +50,9 @@ return {
                 ["std"] = {
                     options = {
                         allow = {
-                            "fs", -- allows @std/fs
                             "path", -- allows @std/path, but not @std/path/win32
-                            "syntax.*", -- allows @std/syntax, @std/syntax/parser, and anything else under @std/syntax
+                            "syntax/types", -- allows @std/syntax/types, but not @std/syntax itself
+                            "test.*", -- allows @std/test, @std/test/assert, and anything else under @std/test
                         },
                     },
                 },
